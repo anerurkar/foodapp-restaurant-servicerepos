@@ -112,6 +112,6 @@
 				</executions>
 			</plugin> -->
 		</plugins>
-		<finalName>foodapp-restaurant-service</finalName>
+		<finalName>foodapp-restaurant-service-demo</finalName>
 	</build>
 </project>
