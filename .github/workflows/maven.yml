@@ -26,8 +26,7 @@ jobs:
       with:
         java-version: '17'
         distribution: 'temurin'
-        cache: maven
-		
+
     - name: Build with Maven
       run: mvn clean install
 	  
@@ -57,3 +56,4 @@ jobs:
           docker build -t $ECR_REGISTRY/$REPOSITORY:$IMAGE_TAG .
           docker push $ECR_REGISTRY/$REPOSITORY:$IMAGE_TAG
           echo "image=$ECR_REGISTRY/$REPOSITORY:$IMAGE_TAG" >> $GITHUB_OUTPUT
+
