@@ -61,9 +61,10 @@ jobs:
       id: task-def
       uses: aws-actions/amazon-ecs-render-task-definition@v1
       with:
-          task-definition: arn:aws:ecs:us-east-1:585768153047:task-definition/spingbootapptaskdef:2
+          task-definition: spingbootapptaskdef-revision2.JSON
           container-name: springbootappexample
           image: ${{ steps.build-image.outputs.image }}
+          
     - name: Deploy Amazon ECS task definition
       uses: aws-actions/amazon-ecs-deploy-task-definition@v1
       with:
