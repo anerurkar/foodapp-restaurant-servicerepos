@@ -1,0 +1,66 @@
+{
+    "taskDefinitionArn": "arn:aws:ecs:us-east-1:585768153047:task-definition/spingbootapptaskdef:3",
+    "containerDefinitions": [
+        {
+            "name": "springbootappexample",
+            "image": "585768153047.dkr.ecr.us-east-1.amazonaws.com/restaurant-service-repo",
+            "cpu": 0,
+            "portMappings": [
+                {
+                    "name": "springbootappexample-8080-tcp",
+                    "containerPort": 8080,
+                    "hostPort": 8080,
+                    "protocol": "tcp",
+                    "appProtocol": "http"
+                }
+            ],
+            "essential": true,
+            "environment": [],
+            "mountPoints": [],
+            "volumesFrom": [],
+            "systemControls": []
+        }
+    ],
+    "family": "spingbootapptaskdef",
+    "taskRoleArn": "arn:aws:iam::585768153047:role/ecsTaskExecutionRole",
+    "executionRoleArn": "arn:aws:iam::585768153047:role/ecsTaskExecutionRole",
+    "networkMode": "awsvpc",
+    "revision": 3,
+    "volumes": [],
+    "status": "ACTIVE",
+    "requiresAttributes": [
+        {
+            "name": "com.amazonaws.ecs.capability.ecr-auth"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.task-iam-role"
+        },
+        {
+            "name": "ecs.capability.execution-role-ecr-pull"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.18"
+        },
+        {
+            "name": "ecs.capability.task-eni"
+        }
+    ],
+    "placementConstraints": [],
+    "compatibilities": [
+        "EC2",
+        "FARGATE"
+    ],
+    "requiresCompatibilities": [
+        "FARGATE"
+    ],
+    "cpu": "1024",
+    "memory": "3072",
+    "runtimePlatform": {
+        "cpuArchitecture": "X86_64",
+        "operatingSystemFamily": "LINUX"
+    },
+    "registeredAt": "2024-12-18T08:42:49.984Z",
+    "registeredBy": "arn:aws:iam::585768153047:root",
+    "enableFaultInjection": false,
+    "tags": []
+}
