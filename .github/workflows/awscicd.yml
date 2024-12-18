@@ -61,7 +61,7 @@ jobs:
       id: task-def
       uses: aws-actions/amazon-ecs-render-task-definition@v1
       with:
-          task-definition: spingbootapptaskdef-revision2.JSON
+          task-definition: spingbootapptaskdef-revision2.json
           container-name: springbootappexample
           image: ${{ steps.build-image.outputs.image }}
           
